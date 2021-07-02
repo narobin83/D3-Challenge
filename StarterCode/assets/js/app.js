@@ -49,7 +49,10 @@ function makeResponsive() {
         var xAxis = d3.axisBottom(xLinearScale);
         var yAxis = d3.axisLeft(yLinearScale);
 
-        
+        chartGroup.append("g")
+          .attr("transform", `translate(0, ${height})`)
+          .call(xAxis);
 
-    }
+
+    })
 };
