@@ -56,6 +56,16 @@ function makeResponsive() {
         chartGroup.append("g")
           .call(yAxis);
         
-        
+        chartGroup.selectAll("circle")
+        .data(healthData)
+        .enter()
+        .append("circle")
+        .attr("cx", d => xLinearScale(d.age))
+        .attr("cy", d => yLinearScale(d.smokes))
+        .attr("r", "10")
+        .attr("fill", "blue")
+        .attr("stroke-width", "1")
+        .attr("stroke", "black")
+        .attr("opacity", ".5");
     })
 };
