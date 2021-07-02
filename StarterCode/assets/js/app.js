@@ -100,3 +100,5 @@ function makeResponsive() {
 
     })
 };
+
+makeResponsive();
