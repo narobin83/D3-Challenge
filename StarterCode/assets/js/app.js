@@ -20,5 +20,12 @@ function makeResponsive() {
 
     var height = svgHeight - margin.top - margin.bottom;
     var width = svgWidth - margin.left - margin.right;
+
+    var svg = d3
+    .select("#scatter")
+    .append("svg")
+    .attr("height", svgHeight)
+    .attr("width", svgWidth);
+
     
 }
