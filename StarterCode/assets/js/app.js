@@ -42,10 +42,13 @@ function makeResponsive() {
           .domain(d3.extent(healthData, d => d.age))
           .range([0, width]);
         
-          var yLinearScale = d3.scaleLinear()
+        var yLinearScale = d3.scaleLinear()
           .domain([8, d3.max(healthData, d => d.smokes)])
           .range([height, 0]);
         
+        var xAxis = d3.axisBottom(xLinearScale);
+        var yAxis = d3.axisLeft(yLinearScale);
+
         
 
     }
