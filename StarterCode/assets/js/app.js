@@ -37,6 +37,12 @@ function makeResponsive() {
           data.smokes = +data.smokes;
           data.age = +data.age;
         });
+
+        var xLinearScale = d3.scaleLinear()
+          .domain(d3.extent(healthData, d => d.age))
+          .range([0, width]);
         
+        
+
     }
 };
