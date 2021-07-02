@@ -89,5 +89,14 @@ function makeResponsive() {
         .attr("fill", "black")
         .text("Median Age");
 
+        chartGroup.append("text")
+        .attr("y", 0 - (margin.left / 2))
+        .attr("x", 0 - (height / 2))
+        .attr("text-anchor", "middle")
+        .attr("font-size", "16px")
+        .attr("fill", "black")
+        .attr("transform", "rotate(-90)")
+        .text("Percentage Who Smoke");
+
     })
 };
