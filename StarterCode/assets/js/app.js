@@ -53,6 +53,9 @@ function makeResponsive() {
           .attr("transform", `translate(0, ${height})`)
           .call(xAxis);
 
-
+        chartGroup.append("g")
+          .call(yAxis);
+        
+        
     })
 };
