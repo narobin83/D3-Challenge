@@ -67,5 +67,20 @@ function makeResponsive() {
         .attr("stroke-width", "1")
         .attr("stroke", "black")
         .attr("opacity", ".5");
+
+        chartGroup.append("g").selectAll("text")
+        .data(healthData)
+        .enter()
+        .append("text")
+        .text(d => d.abbr)
+        .attr("x", d => xLinearScale(d.age))
+        .attr("y", d => yLinearScale(d.smokes))
+        .attr("text-anchor", "middle")
+        .attr("alignment-baseline", "central")
+        .attr("font_family", "sans-serif")
+        .attr("font-size", "10px")
+        .attr("fill", "white")
+        .style("font-weight", "bold");
+
     })
 };
