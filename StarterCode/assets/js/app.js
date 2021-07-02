@@ -18,5 +18,7 @@ function makeResponsive() {
         left: 50
       };
 
+    var height = svgHeight - margin.top - margin.bottom;
+    var width = svgWidth - margin.left - margin.right;
     
 }
