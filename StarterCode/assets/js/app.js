@@ -82,5 +82,12 @@ function makeResponsive() {
         .attr("fill", "white")
         .style("font-weight", "bold");
 
+        chartGroup.append("text")
+        .attr("transform", `translate(${width / 2}, ${height + margin.top - 10})`)
+        .attr("text-anchor", "middle")
+        .attr("font-size", "16px")
+        .attr("fill", "black")
+        .text("Median Age");
+
     })
 };
